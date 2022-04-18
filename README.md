@@ -1,1 +1,1 @@
-# Holberton Web Front End
+# Holberton School - Web Front End
