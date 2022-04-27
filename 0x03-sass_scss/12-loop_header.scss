@@ -1,6 +1,6 @@
 /* Creates h tag with font size */
-@for $value from 1 through 6 {
+@for $value from 1 through 5 {
     h#($value) {
-        font-size: #($value)px;
+        font-size: 0px + $value;
     }
 }
