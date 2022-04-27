@@ -1,0 +1,10 @@
+/* Write a Sass file that assigns the text color to the HTML tags body & p */
+$variable: #3D3D3D;
+
+body {
+  color: $variable;
+}
+
+p {
+  color: $variable;
+}
