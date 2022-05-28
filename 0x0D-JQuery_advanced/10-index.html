@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 10</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="application/javascript">
+            function addPostRow(data) {
+                const id = data.id;
+                const title = data.title;
+                const author = data.author;
+
+                $('body').append('<p><span>Post created with id ' + id + ' title:' + title + 'author ' + author + ' </span></p>');
+            }
+
+            function listPosts() {
+                $.get('http://localhost:3000/posts').then(function (data) {
+                    data.forEach(function (res) {
+                        addPostRow(res)
+                    })
+
+                    }).fail(function () {
+                        alert('Server error')
+                    })
+            }
+
+            listPosts();
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
